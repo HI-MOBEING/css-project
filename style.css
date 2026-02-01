@@ -1,0 +1,310 @@
+
+:root {
+    --gold: #c5a059;
+    --dark: #1a1a1a;
+    --cream: #faf7f2;
+    --glass: rgba(255, 255, 255, 0.8);
+    --shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+* { box-sizing: border-box;
+     transition: all 0.2s ease;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, sans-serif;
+    background-color: var(--cream);
+    color: var(--dark);
+    margin: 0;
+}
+
+/* --- THE HEADER (Modern & Sticky) --- */
+header {
+    background: var(--glass);
+    backdrop-filter: blur(10px);
+    background-color: #ffdde7 ;
+    position:static;
+    top: 0;
+    font-weight: bold;
+    font-size: 26px;
+    /* z-index: 1000; */
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    height: fit-content;
+}
+
+.header-banner {
+    height: 120px;
+    /* object-fit: cover; */
+    filter: brightness(0.8);
+}
+
+nav table {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    padding: 15px 0;
+    display: inline-block;
+}
+
+nav a:hover {
+    color: var(--gold);
+    transform: translateY(-2px);
+    
+   
+}
+header img{
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+
+
+
+
+
+/* captions */
+
+h1{
+   font-size: 24px; 
+   margin-left:20px ;
+   font-style: italic;
+}
+ .p{
+    font-size: 20px;
+    margin-left:  15px;
+}
+
+h3{
+    font-size: 22px;
+   margin-left:20px ;
+   font-style:italic;  
+}
+div p{
+    font-size: 18px;
+    margin-left: 15px;
+}
+.topProducts{
+    font-size: 18px;
+    font-style: italic;
+    margin-left:15px ;
+
+}
+
+
+
+/* --- THE PRODUCT CARDS  --- */
+.products {
+     display: grid;
+    grid-template-columns: repeat(2, 1fr) ;
+    gap: 40px;
+    padding: 40px;
+
+ 
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.pro{
+    border-radius: 10px;
+    overflow: hidden;
+    border: 0.5px solid lightgray;
+    width: 300px;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: var(--shadow);
+}
+.pro:hover{
+transform:scale(1.1) ;
+color: var(--gold);
+}
+.pro img{
+     width: 100%;
+    height: 350px;
+    object-fit: cover
+}
+.product {
+     display: grid;
+    grid-template-columns: repeat(3, 1fr) ;
+    gap: 40px;
+    padding: 40px;
+
+ 
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.container{
+    width: 275px;
+    
+}
+
+.container figure {
+    margin: 0;
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    position: relative;
+    border: 1px solid #eee;
+}
+
+.container figure:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.container img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+figcaption {
+    padding: 20px;
+    background: #fff;
+}
+
+figcaption b {
+    display: block;
+    color: var(--gold);
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    margin-bottom: 5px;
+}
+
+
+
+.single{
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    background-color: white;
+}
+.single img{
+    width: 350px;
+    height: 400px;
+}
+.sec{
+    margin: 20px;
+}
+
+
+
+
+
+/* --table-- */
+.price-table{
+    border-collapse: collapse;
+    margin: 25px 10%;
+    font-size: 1em;
+    min-width: 400px;
+    width: 80%;
+    box-shadow: var(--shadow);
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    
+
+}
+.price-table  tr th {
+    background-color: #fab0d9;
+    color: white;
+    text-align: left;
+    font-weight: bold;
+    padding: 12px 15px;
+    border-bottom: none;
+}
+.price-table td{
+    padding: 12px 15px;
+}
+.price-table tr{
+    border-bottom: 1px solid gray;
+}
+.price-table tr:hover{
+    color: var(--gold);
+
+}
+.price-table tr:nth-of-type(even){
+    background-color: #f3f3f3;
+}
+.price-table tr:last-of-type{
+    border-bottom: 2px solid #fab0d9;
+}
+
+
+main p a{
+    margin: 30px;
+    text-decoration: none;
+    color: goldenrod;
+    padding: 15px;
+    /* border: 1px solid #fab0d9; */
+    text-align: center;
+
+}
+main p a:hover{
+    color: var(--gold);
+
+}
+
+
+
+
+
+/* --- CHECKOUT FORM --- */
+form {
+    max-width: 500px;
+    margin: 50px auto;
+    background: #fff;
+    background-color: #ffdde7;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+}
+.check{
+  display: flex;
+  align-items:center;
+  justify-content:space-evenly;
+  margin-bottom:15px ;
+}
+
+input, textarea {
+    width: 100%;
+    border: 1px solid #ddd;
+    padding: 12px;
+    border-radius: 8px;
+    margin-top: 5px;
+}
+
+button {
+    width: 100%;
+    background: var(--dark);
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background: var(--gold);
+}
+
+/* --- CLEANING UP HTML ELEMENTS --- */
+hr { display: none; } /* We use padding and borders instead for a cleaner look */
+footer { text-align: center; 
+    padding: 60px;
+     color: #555555; 
+     background-color: #ffd1df;
+     font-size: 0.8rem; 
+     position: sticky;
+    }
+
+
